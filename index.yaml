@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  helm-cert-issuer:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-09-01T08:05:03.6320242+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 041a69743817004292880c9171f48731281a1c681839a18314b5cfd28eff2229
+    name: helm-cert-issuer
+    type: application
+    urls:
+    - https://marupa-sudo.github.io/helm-cert-issuer/helm-cert-issuer-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-09-01T08:05:03.6319009+01:00"
