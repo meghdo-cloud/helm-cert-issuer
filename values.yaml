@@ -1,0 +1,10 @@
+namespace: "istio-system"
+project_id : "meghdo-4567" # - to be overridden by terraform
+
+ingressgateway:
+  "certificate" : "ingress-cert"
+  "dns": "meghdo.cloud" # - to be overridden by terraform
+
+issuer:
+  email: "raman.aparna@gmail.com" # - to be overridden by terraform
+  server: "https://acme-v02.api.letsencrypt.org/directory"

@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: default-certificate
+  namespace: {{ .Values.namespace }}
+spec:
+  secretName: {{ .Values.ingressgateway.certificate }}
+  issuerRef:
+    name: default-issuer
+  dnsNames:
+  - {{ .Values.ingressgateway.dns }}
