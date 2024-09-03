@@ -7,5 +7,7 @@ spec:
   secretName: {{ .Values.ingressgateway.certificate }}
   issuerRef:
     name: default-issuer
+  commonName: "*.{{ .Values.ingressgateway.dns  }}"
   dnsNames:
-  - {{ .Values.ingressgateway.dns }}
+  - "{{ .Values.ingressgateway.dns  }}"
+  - "*.{{ .Values.ingressgateway.dns  }}"

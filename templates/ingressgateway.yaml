@@ -12,7 +12,7 @@ spec:
         name: http
         protocol: HTTP
       hosts:
-        - {{ .Values.ingressgateway.dns }}
+        - "*"
       tls:
         httpsRedirect: true
     - port:
@@ -20,7 +20,7 @@ spec:
         name: https
         protocol: HTTPS
       hosts:
-        - {{ .Values.ingressgateway.dns }}
+        - "*"
       tls:
         mode: SIMPLE
         credentialName: {{ .Values.ingressgateway.certificate }}
