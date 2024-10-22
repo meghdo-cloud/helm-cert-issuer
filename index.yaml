@@ -3,22 +3,12 @@ entries:
   helm-cert-issuer:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-09-03T20:09:29.3871561+01:00"
+    created: "2024-10-22T22:19:13.6423531+01:00"
     description: A Helm chart for Kubernetes
-    digest: b5208a2fff558a88c3bb5316d700db088b509188d14f5708f01ed595ebd5f946
+    digest: 1cb9410f1d5e81ba03cb396f0bc7287dc5039c0a3693ded4e76c8ab50531ca0e
     name: helm-cert-issuer
     type: application
     urls:
-    - https://marupa-sudo.github.io/helm-cert-issuer/helm-cert-issuer-0.2.0.tgz
+    - https://meghdo-cloud.github.io/helm-cert-issuer/helm-cert-issuer-0.2.0.tgz
     version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2024-09-03T20:09:29.3869629+01:00"
-    description: A Helm chart for Kubernetes
-    digest: 041a69743817004292880c9171f48731281a1c681839a18314b5cfd28eff2229
-    name: helm-cert-issuer
-    type: application
-    urls:
-    - https://marupa-sudo.github.io/helm-cert-issuer/helm-cert-issuer-0.1.0.tgz
-    version: 0.1.0
-generated: "2024-09-03T20:09:29.3864112+01:00"
+generated: "2024-10-22T22:19:13.6423531+01:00"
