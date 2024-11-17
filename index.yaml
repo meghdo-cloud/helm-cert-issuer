@@ -3,7 +3,17 @@ entries:
   helm-cert-issuer:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-10-22T22:19:13.6423531+01:00"
+    created: "2024-11-17T18:49:48.3488466Z"
+    description: A Helm chart for Kubernetes
+    digest: 98a08ae657d773ebf6fb4a596da8442e920f2205acd9cdfc077ff7847b1680fb
+    name: helm-cert-issuer
+    type: application
+    urls:
+    - https://meghdo-cloud.github.io/helm-cert-issuer/helm-cert-issuer-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-11-17T18:49:48.3478833Z"
     description: A Helm chart for Kubernetes
     digest: 1cb9410f1d5e81ba03cb396f0bc7287dc5039c0a3693ded4e76c8ab50531ca0e
     name: helm-cert-issuer
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://meghdo-cloud.github.io/helm-cert-issuer/helm-cert-issuer-0.2.0.tgz
     version: 0.2.0
-generated: "2024-10-22T22:19:13.6423531+01:00"
+generated: "2024-11-17T18:49:48.3463828Z"

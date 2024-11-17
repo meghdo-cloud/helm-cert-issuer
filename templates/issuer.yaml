@@ -13,3 +13,15 @@ spec:
     - dns01:
         cloudDNS:
           project: {{ .Values.project_id }}
+        cnameStrategy: Follow
+        podTemplate:
+          spec:
+            nodeSelector:
+              kubernetes.io/os: linux
+            tolerations:
+            - effect: NoSchedule
+              key: node-role.kubernetes.io/master
+            containers:
+            - name: cert-manager-acmesolver
+              args:
+              - "--timeout=180"

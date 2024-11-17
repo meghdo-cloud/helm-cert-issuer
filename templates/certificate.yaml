@@ -3,6 +3,11 @@ kind: Certificate
 metadata:
   name: default-certificate
   namespace: {{ .Values.namespace }}
+  annotations:
+    cert-manager.io/issue-temporary-certificate: "true"
+    cert-manager.io/retry-duration: "60m"
+    acme.cert-manager.io/dns01-recursive-nameservers: "8.8.8.8:53,1.1.1.1:53"
+    acme.cert-manager.io/dns01-recursive-nameservers-only: "true"
 spec:
   secretName: {{ .Values.ingressgateway.certificate }}
   issuerRef:
@@ -11,3 +16,11 @@ spec:
   dnsNames:
   - "{{ .Values.ingressgateway.dns  }}"
   - "*.{{ .Values.ingressgateway.dns  }}"
+  duration: 2160h # 90 days
+  renewBefore: 360h # 15 days
+  privateKey:
+    algorithm: RSA
+    size: 2048
+  usages:
+    - digital signature
+    - key encipherment
