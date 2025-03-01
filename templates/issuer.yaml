@@ -10,18 +10,27 @@ spec:
     privateKeySecretRef:
       name: default-issuer
     solvers:
+    {{- if eq .Values.cloudProvider "aws" }}
+    - dns01:
+        route53:
+          region: {{ .Values.aws.region }}
+          {{- if .Values.aws.hostedZoneID }}
+          hostedZoneID: {{ .Values.aws.hostedZoneID }}
+          {{- end }}
+    {{- else if eq .Values.cloudProvider "gcp" }}
     - dns01:
         cloudDNS:
-          project: {{ .Values.project_id }}
+          project: {{ .Values.gcp.project_id }}
         cnameStrategy: Follow
         podTemplate:
           spec:
             nodeSelector:
               kubernetes.io/os: linux
             tolerations:
-            - effect: NoSchedule
-              key: node-role.kubernetes.io/master
+              - effect: NoSchedule
+                key: node-role.kubernetes.io/master
             containers:
-            - name: cert-manager-acmesolver
-              args:
-              - "--timeout=180"
+              - name: cert-manager-acmesolver
+                args:
+                  - "--timeout=180"
+    {{- end }}

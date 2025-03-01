@@ -1,5 +1,5 @@
 namespace: "istio-system"
-project_id : "meghdo-4567" # - to be overridden by terraform
+ingress_name : "meghdo-4567" # - to be overridden by terraform
 
 ingressgateway:
   "certificate" : "ingress-cert"
@@ -8,3 +8,14 @@ ingressgateway:
 issuer:
   email: "raman.aparna@gmail.com" # - to be overridden by terraform
   server: "https://acme-v02.api.letsencrypt.org/directory"
+
+cloudProvider: "gcp"  # Options: "aws" or "gcp"
+
+# AWS specific configuration
+aws:
+  region: "us-east-1"
+  hostedZoneID: "Z1234567890ABC"
+
+# GCP specific configuration
+gcp:
+  project_id: "meghdo-4567"
